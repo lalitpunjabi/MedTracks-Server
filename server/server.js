@@ -17,6 +17,9 @@ app.use(cors({
 }));
 app.use(express.json());
 
+app.use('/', (req, res) => {
+  res.send('MedTracks API is running');
+});
 app.use('/api', authRoutes);
 app.use('/api/medicines', medicineRoutes);
 app.use('/api/intake', intakeRoutes);
