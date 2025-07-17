@@ -12,12 +12,12 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:3000'],
+  origin: ['http://localhost:3000','https://melodious-dieffenbachia-8c3f41.netlify.app/'],
   credentials: true,
 }));
 app.use(express.json());
 
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
   res.send('MedTracks API is running');
 });
 app.use('/api', authRoutes);
