@@ -12,7 +12,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:3000','https://genuine-sunburst-f6d4f0.netlify.app/'],
+  origin: ['https://genuine-sunburst-f6d4f0.netlify.app/'],
   credentials: true,
 }));
 app.use(express.json());
